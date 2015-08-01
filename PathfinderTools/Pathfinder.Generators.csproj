@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{072E96FE-AACA-462C-AD0A-598AB8464756}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pathfinder.Generators</RootNamespace>
+    <AssemblyName>Pathfinder.Generators</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background\HFC\AdoptedOutsideYourRaceTable.cs" />
+    <Compile Include="Background\HFC\CoreObjects\Nobility.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\WayangAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\VishkanyaAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\VanaraAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\UndineAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\TieflingAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\TenguAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\SylphAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\SvirfneblinAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\SuliAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\StrixAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\SamsaranAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\RatfolkAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\OreadAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\OrcAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\NagajiAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\MerfolkAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\KoboldAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\KitsuneAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\IfritAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\HumanAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\HobgoblinAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\HalflingAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\HalfOrcAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\HalfElfAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\GrippliAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\GoblinAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\GnomeAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\GillmanAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\FetchlingAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\ElfAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\DwarfAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\DuergarAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\DhampirAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\ChangelingAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\CatfolkAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\BirthCircumstanceProvider\IBirthCircumstanceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\BirthCircumstanceProvider\BirthCircumstanceProviderBase.cs" />
+    <Compile Include="Background\HFC\Providers\BirthCircumstanceProvider\LowerClassBirthCircumstanceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\DwarfProviders\IDwarfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\ElfProviders\IElfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\GnomeProviders\IGnomeHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalfElfProviders\IHalfElfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalflingProviders\IHalflingHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalfOrcProviders\IHalfOrcHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HumanProviders\IHumanHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HumanProviders\TownOrVillageHumanHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalflingProviders\HalflingSettlementHalflingHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalfOrcProviders\SubterraneanHalfOrcHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\HalfElfProviders\ElvenHomelandHalfElfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\GnomeProviders\ForestGnomeHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\ElfProviders\ForestElfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\DwarfProviders\HillsOrMountainsDwarfHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\HomelandProviders\IHomelandProvider.cs" />
+    <Compile Include="Background\HFC\Providers\NobilityProvider\GentryNobilityProvider.cs" />
+    <Compile Include="Background\HFC\Providers\NobilityProvider\INobilityProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\ClergyOrCultistsParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\MerchantsParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\ArtisansParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\TradespeopleParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\YeomenParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\ThievesParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\SailorsParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\SoldiersParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\IParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\EntertainersParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\SerfsPeasantsParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\Providers\ParentsProfessionProvider\SlaveParentsProfessionProvider.cs" />
+    <Compile Include="Background\HFC\SiblingTable.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\FiendAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\SavageHumanoidsAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\CivilizedHumanoidsAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\BeastsAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\AngelsAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\DeadAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\DragonsAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\FeyAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedRaceProviders\IAdoptedRaceProvider.cs" />
+    <Compile Include="Background\HFC\AdoptedSiblingRaceTable.cs" />
+    <Compile Include="Background\HFC\Base\BaseBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\CircumstancesOfBirthTable.cs" />
+    <Compile Include="Background\HFC\CoreObjects\AdoptiveRace.cs" />
+    <Compile Include="Background\HFC\CoreObjects\CircumstanceOfBirth.cs" />
+    <Compile Include="Background\HFC\CoreObjects\ParentsProfession.cs" />
+    <Compile Include="Background\HFC\Interfaces\IHomelandTable.cs" />
+    <Compile Include="Background\HFC\Interfaces\IParentsTable.cs" />
+    <Compile Include="Background\HFC\Interfaces\ISiblingsTable.cs" />
+    <Compile Include="Background\HFC\CoreObjects\Parents.cs" />
+    <Compile Include="Background\HFC\CoreObjects\Sibling.cs" />
+    <Compile Include="Background\HFC\CoreObjects\SiblingsList.cs" />
+    <Compile Include="Background\HFC\Elf\ElfBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\Elf\ElfHomelandTable.cs" />
+    <Compile Include="Background\HFC\Elf\ElfParentsTable.cs" />
+    <Compile Include="Background\HFC\Elf\ElfSiblingsTable.cs" />
+    <Compile Include="Background\HFC\Gnome\GnomeBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\Gnome\GnomeHomelandTable.cs" />
+    <Compile Include="Background\HFC\Gnome\GnomeParentsTable.cs" />
+    <Compile Include="Background\HFC\Gnome\GnomeSiblingsTable.cs" />
+    <Compile Include="Background\HFC\HalfElf\HalfElfBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\HalfElf\HalfElfHomelandTable.cs" />
+    <Compile Include="Background\HFC\HalfElf\HalfElfParentsTable.cs" />
+    <Compile Include="Background\HFC\HalfElf\HalfElfSiblingsTable.cs" />
+    <Compile Include="BackgroundEnums.cs" />
+    <Compile Include="Background\HFC\CoreObjects\Homeland.cs" />
+    <Compile Include="Background\HFC\Halfling\HalflingBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\Halfling\HalflingHomelandTable.cs" />
+    <Compile Include="Background\HFC\Halfling\HalflingParentsTable.cs" />
+    <Compile Include="Background\HFC\Halfling\HalflingSiblingsTable.cs" />
+    <Compile Include="Background\HFC\HalfOrc\HalfOrcBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\HalfOrc\HalfOrcHomelandTable.cs" />
+    <Compile Include="Background\HFC\HalfOrc\HalfOrcParentsTable.cs" />
+    <Compile Include="Background\HFC\HalfOrc\HalfOrcSiblingsTable.cs" />
+    <Compile Include="Background\HFC\Human\HumanBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\Human\HumanHomelandTable.cs" />
+    <Compile Include="Background\HFC\Human\HumanParentsTable.cs" />
+    <Compile Include="Background\HFC\Human\HumanSiblingsTable.cs" />
+    <Compile Include="Background\HFC\NobilityTable.cs" />
+    <Compile Include="Background\HFC\ParentsProfessionTable.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\AasimarAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\IAdoptedSiblingRaceProvider.cs" />
+    <Compile Include="Background\HFC\Providers\RelativeSiblingAgeProvider\IRelativeSiblingAgeProvider.cs" />
+    <Compile Include="Background\HFC\Providers\RelativeSiblingAgeProvider\TwinRelativeSiblingAgeProvider.cs" />
+    <Compile Include="Background\HFC\Providers\RelativeSiblingAgeProvider\YoungerRelativeSiblingAgeProvider.cs" />
+    <Compile Include="Background\HFC\Providers\RelativeSiblingAgeProvider\OlderRelativeSiblingAgeProvider.cs" />
+    <Compile Include="Background\HFC\UnusualHomelandTable.cs" />
+    <Compile Include="Background\HFC\Dwarf\DwarfBackgroundBuilder.cs" />
+    <Compile Include="Background\HFC\Dwarf\DwarfHomelandTable.cs" />
+    <Compile Include="Background\HFC\Dwarf\DwarfParentsTable.cs" />
+    <Compile Include="Background\HFC\Dwarf\DwarfSiblingsTable.cs" />
+    <Compile Include="Background\IHFCCharacterInformation.cs" />
+    <Compile Include="Background\Traits\CombatTraits\AxeToGrindTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\ResilientTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\CourageousTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\ReactionaryTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\TacticianTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\KinGuardianTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\AnatomistTrait.cs" />
+    <Compile Include="Background\Traits\CombatTraits\CombatTraitBase.cs" />
+    <Compile Include="Background\Traits\FaithTraits\FaithTraitBase.cs" />
+    <Compile Include="Background\Traits\ITrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\OmenTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\ReincarnatedTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\ProphesiedTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\SacredConduitTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\SacredTouchTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\BirthmarkTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\BlessedTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\ChildOfTheTempleTrait.cs" />
+    <Compile Include="Background\Traits\FaithTraits\ScholarOfTheGreatBeyondTrait.cs" />
+    <Compile Include="Background\Traits\MagicTraits\MagicTraitBase.cs" />
+    <Compile Include="Background\Traits\MagicTraits\MagicalKnackTrait.cs" />
+    <Compile Include="Background\Traits\MagicTraits\MagicalTalentTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\BaseRaceTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Bloodline\FiendBloodTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Bloodline\DeathtouchedTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Bloodline\BloodOfDragonsTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Bloodline\BloodlineRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Dwarf\DwarfRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Dwarf\TunnelFighterTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Dwarf\GoldsnifferTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Dwarf\BrewmasterTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Elf\ElfRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Elf\WarriorOfOldTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Elf\ForlornTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Gnome\RapscallionTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Gnome\GnomeRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Gnome\AnimalFriendTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfElf\FailedApprenticeTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfElf\ElvenReflexesTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfElf\HalfElfRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Halfling\HalflingRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Halfling\WellInformedTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Halfling\FreedomFighterTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfOrc\ScrapperTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfOrc\OutcastTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfOrc\BruteTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfOrc\HalfOrcRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\HalfOrc\AlmostHumanTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Human\HumanRaceTraitBase.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Human\WorldTravelerTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraits\Human\ScholarOfRuinsTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\BaseRegionalTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\FrontierForgedTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\TundraChildTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\SeasouledTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\DesertChildTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\RiverRatTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\SavannaChildTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\LogRollerTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\VagabondChildTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\MilitiaVeteranTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\SurfaceStrangerTrait.cs" />
+    <Compile Include="Background\Traits\RegionalTraits\HighlanderTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\BaseSocialTrait.cs" />
+    <Compile Include="Background\Traits\RaceTraitEnum.cs" />
+    <Compile Include="Background\Traits\SocialTraits\SavageTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\ChildOfTheStreetsTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\FriendInEveryTownTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\RichParentsTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\LifeOfToilTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\ArtisanTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\MerchantTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\InfluenceTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\BastardTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\CharmingTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\WorldlyTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\TalentedTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\PovertyStrickenTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\OrphanedTrait.cs" />
+    <Compile Include="Background\Traits\SocialTraits\CivilizedTrait.cs" />
+    <Compile Include="Background\Traits\TraitEnum.cs" />
+    <Compile Include="Background\Traits\Traits.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomDieGenerator.cs" />
+    <Compile Include="RangeTool.cs" />
+    <Compile Include="Background\HFC\RelativeSiblingAgeTable.cs" />
+    <Compile Include="TableHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
