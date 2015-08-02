@@ -8,12 +8,12 @@ namespace Pathfinder.Generators.Background
 {
     public interface IHFCCharacterInformation
     {
-        string GetRace();
-        List<Sibling> GetSiblingList();
-        Homeland GetHomeland();
-        CircumstanceOfBirth GetBirthCircumstance();
-        ParentsProfession GetParentsProfession();
-        AdoptiveRace GetAdoptiveRace();
-        Nobility GetNobility();
+        string Race { get; }
+        List<Sibling> SiblingList {get; }
+        Homeland Homeland { get; }
+        CircumstanceOfBirth BirthCircumstance { get;  }
+        ParentsProfession ParentsProfession { get; }
+        AdoptiveRace AdoptiveRace { get;  }
+        Nobility Nobility { get; }
     }
 }

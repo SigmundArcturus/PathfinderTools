@@ -24,6 +24,11 @@ namespace Pathfinder.Generators.Background
 
         public List<Enum> CharacterTraits { get; protected set; }
 
+        public IHFCCharacterInformation UpdateCharacterSheet(IHFCCharacterInformation characterInformation)
+        {
+            return characterInformation;
+        }
+
         protected void generateCharacterTraits()
         {
             traits.Clear();
