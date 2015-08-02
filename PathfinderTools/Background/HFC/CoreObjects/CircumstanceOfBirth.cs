@@ -12,6 +12,6 @@ namespace Pathfinder.Generators.Background
         public List<ITrait> Traits = new List<ITrait>();
         public List<Enum> StoryFeats = new List<Enum>();
         public List<ParentsProfession> ParentsProfession = new List<ParentsProfession>();
-        public BackgroundEnums.NobilityTypes NobilityType;
+        public Nobility Nobility;
     }
 }

@@ -6,47 +6,58 @@ using System.Threading.Tasks;
 
 namespace Pathfinder.Generators.Background
 {
-    abstract public class BaseBackgroundBuilder
+    public abstract class BaseBackgroundBuilder
     {
-        protected IHomelandTable homelandTable;
-        protected IParentsTable parentsTable;
-        protected ISiblingsTable siblingsTable;
-        protected List<Enum> traits = new List<Enum>();
+        private IHomelandTable homelandTable;
+        private IParentsTable parentsTable;
+        private ISiblingsTable siblingsTable;
 
-        protected SiblingsList characterSiblings;
-        protected Homeland characterHomeland;
-
-        public Parents CharacterParents { get; protected set; }
-
-        public Homeland CharacterHomeland { get; protected set;}
-
-        public SiblingsList CharacterSiblings { get; protected set; }
-
-        public List<Enum> CharacterTraits { get; protected set; }
-
-        public IHFCCharacterInformation UpdateCharacterSheet(IHFCCharacterInformation characterInformation)
+        public BaseBackgroundBuilder(IHomelandTable homelandTable, IParentsTable parentsTable, ISiblingsTable siblingsTable)
         {
+            this.homelandTable = homelandTable;
+            this.parentsTable = parentsTable;
+            this.siblingsTable = siblingsTable;
+        }
+
+        public CharacterInformation CreateBackground()
+        {
+            CharacterInformation characterInformation = new CharacterInformation();
+            GenerateHomeland(characterInformation);
+            GenerateParents(characterInformation);
+            GenerateSiblings(characterInformation);
+            GenerateCircumstancesOfBirth(characterInformation);
+            GenerateParentsProfession(characterInformation);
+
             return characterInformation;
         }
 
-        protected void generateCharacterTraits()
+        protected void GenerateHomeland(CharacterInformation characterInformation)
         {
-            traits.Clear();
+            characterInformation.Homeland = homelandTable.GenerateHomeland();
+        }
 
-            foreach (Enum trait in characterHomeland.Traits)
-            {
-                if (!traits.Contains(trait)) { traits.Add(trait); }
-            }
+        protected void GenerateSiblings(CharacterInformation characterInformation)
+        {
+            characterInformation.SiblingList = siblingsTable.GenerateSiblings();
+        }
 
-            foreach (Enum trait in CharacterParents.Traits)
-            {
-                if (!traits.Contains(trait)) { traits.Add(trait); }
-            }
+        protected void GenerateParents(CharacterInformation characterInformation)
+        {
+            characterInformation.Parents = parentsTable.GenerateParents();
+        }
 
-            foreach (Enum trait in characterSiblings.Traits)
+        protected void GenerateCircumstancesOfBirth(CharacterInformation characterInformation)
+        {
+            characterInformation.BirthCircumstance = new CircumstancesOfBirthTable().GenerateCircumstance();
+            if (characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.AdoptedOutsideYourRace)
             {
-                if (!traits.Contains(trait)) { traits.Add(trait); }
+                characterInformation.AdoptiveRace = AdoptedOutsideYourRaceTable.GenerateRace();
             }
+        }
+
+        protected void GenerateParentsProfession(CharacterInformation characterInformation)
+        {
+            characterInformation.ParentsProfession = new ParentsProfessionTable().GenerateProfession();
         }
     }
 }

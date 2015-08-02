@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Background\CharacterInformation.cs" />
     <Compile Include="Background\HFC\Tables\AdoptedOutsideYourRaceTable.cs" />
     <Compile Include="Background\HFC\CoreObjects\Nobility.cs" />
     <Compile Include="Background\HFC\Providers\AdoptedSiblingRaceProvider\WayangAdoptedSiblingRaceProvider.cs" />

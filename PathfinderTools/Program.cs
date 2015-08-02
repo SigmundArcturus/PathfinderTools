@@ -13,8 +13,8 @@ namespace Pathfinder.Generators.Background
     {
         static void Main(string[] args)
         {
-            AdoptedOutsideYourRaceTable.GenerateRace();
-            SiblingTable.GenerateSibling(true);
+            DwarfBackgroundBuilder dbb = new DwarfBackgroundBuilder();
+            CharacterInformation charInfo = dbb.CreateBackground();
 
             string race = Console.ReadLine();
         }
