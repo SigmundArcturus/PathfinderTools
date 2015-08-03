@@ -16,13 +16,13 @@ namespace Pathfinder.Generators.Background
             if (RangeTool.WithinRange(1, 40, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.LowerClassBirth;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession(RandomDieGenerator.D20 + RandomDieGenerator.D20));
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession(RandomDieGenerator.D20 + RandomDieGenerator.D20));
                 circumstance.Traits.Add(new PovertyStrickenTrait());
             }
             else if (RangeTool.WithinRange(41, 65, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.MiddleClassBirth;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new ArtisanTrait());
                 circumstance.Traits.Add(new MerchantTrait());
             }
@@ -44,90 +44,90 @@ namespace Pathfinder.Generators.Background
             {
 
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.Adopted;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
             }
             else if (RangeTool.WithinRange(78, 81, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BastardBorn;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new BastardTrait());
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.Shamed);
+                circumstance.StoryFeats.Add(new ShamedStoryFeat());
             }
             else if (dieValue == 82)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BlessedBirth;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new BlessedTrait());
                 circumstance.Traits.Add(new BirthmarkTrait());
             }
             else if (RangeTool.WithinRange(82, 84, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BornOfViolence;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new AxeToGrindTrait());
                 circumstance.Traits.Add(new BastardTrait());
             }
             else if (dieValue == 85)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BornOutOfTime;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new ScholarOfTheGreatBeyondTrait());
             }
             else if (RangeTool.WithinRange(86, 87, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BornIntoBondage;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new LifeOfToilTrait());
             }
             else if (dieValue == 88)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.CursedBirth;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new FiendBloodTrait());
             }
             else if (RangeTool.WithinRange(88, 90, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.DishonoredFamily;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new ReactionaryTrait());
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.LostLegacy);
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.Redemption);
+                circumstance.StoryFeats.Add(new LostLegacyStoryFeat());
+                circumstance.StoryFeats.Add(new RedemptionStoryFeat());
             }
             else if (RangeTool.WithinRange(91, 92, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.HeirToALegacy;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new InfluenceTrait());
                 circumstance.Traits.Add(new RichParentsTrait());
             }
             else if (RangeTool.WithinRange(93, 94, dieValue))
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.LeftToDie;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new CourageousTrait());
                 circumstance.Traits.Add(new SavageTrait());
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.Arisen);
+                circumstance.StoryFeats.Add(new ArisenStoryFeat());
             }
             else if (dieValue == 95)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.MarkedByTheGods;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new BirthmarkTrait());
                 circumstance.Traits.Add(new SacredTouchTrait());
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.Prophet);
+                circumstance.StoryFeats.Add(new ProphetStoryFeat());
             }
             else if (dieValue == 96)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.EnergyInfused;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new SacredConduitTrait());
                 circumstance.Traits.Add(new SacredTouchTrait());
             }
             else if (dieValue == 97)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.ProgenyOfPower;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new MagicalTalentTrait());
                 circumstance.Traits.Add(new CharmingTrait());
                 circumstance.Traits.Add(new SacredTouchTrait());
@@ -135,21 +135,21 @@ namespace Pathfinder.Generators.Background
             else if (dieValue == 98)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.Prophesied;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new ProphesiedTrait());
             }
             else if (dieValue == 99)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.Reincarnated;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new ReincarnatedTrait());
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.ForgottenPast);
-                circumstance.StoryFeats.Add(BackgroundEnums.StoryFeats.Arisen);
+                circumstance.StoryFeats.Add(new ForgottenPastStoryFeat());
+                circumstance.StoryFeats.Add(new ArisenStoryFeat());
             }
             else if (dieValue == 100)
             {
                 circumstance.CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.TheOmen;
-                circumstance.ParentsProfession.Add(parentsProfessionTable.GenerateProfession());
+                circumstance.ParentsProfessions.Add(parentsProfessionTable.GenerateProfession());
                 circumstance.Traits.Add(new OmenTrait());
             }
 

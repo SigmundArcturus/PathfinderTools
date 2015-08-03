@@ -21,9 +21,9 @@ namespace Pathfinder.Generators.Background.Providers
                     new DeathtouchedTrait(),
                     new MagicalKnackTrait()
                 },
-                StoryFeats = new List<Enum>()
+                StoryFeats = new List<IStoryFeats>()
                 {
-                    BackgroundEnums.StoryFeats.GlimpseBeyond
+                    new GlimpseBeyondStoryFeat()
                 }
             };
         }

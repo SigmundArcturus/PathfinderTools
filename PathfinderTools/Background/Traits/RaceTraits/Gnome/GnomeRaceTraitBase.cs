@@ -8,9 +8,5 @@ namespace Pathfinder.Generators.Background
 {
     public abstract class GnomeRaceTraitBase : BaseRaceTrait
     {
-        public override RaceTraitEnum RaceTraitType
-        {
-            get { return RaceTraitEnum.Gnome; }
-        }
     }
 }

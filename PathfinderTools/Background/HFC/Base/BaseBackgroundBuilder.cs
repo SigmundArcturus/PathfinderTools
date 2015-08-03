@@ -26,7 +26,6 @@ namespace Pathfinder.Generators.Background
             GenerateParents(characterInformation);
             GenerateSiblings(characterInformation);
             GenerateCircumstancesOfBirth(characterInformation);
-            GenerateParentsProfession(characterInformation);
 
             return characterInformation;
         }
@@ -53,11 +52,7 @@ namespace Pathfinder.Generators.Background
             {
                 characterInformation.AdoptiveRace = AdoptedOutsideYourRaceTable.GenerateRace();
             }
-        }
-
-        protected void GenerateParentsProfession(CharacterInformation characterInformation)
-        {
-            characterInformation.ParentsProfession = new ParentsProfessionTable().GenerateProfession();
+            characterInformation.ParentsProfessions = characterInformation.BirthCircumstance.ParentsProfessions;
         }
     }
 }

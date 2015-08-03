@@ -9,6 +9,6 @@ namespace Pathfinder.Generators.Background
     public class SiblingsList
     {
         public List<Sibling> Siblings = new List<Sibling>();
-        public List<Enum> Traits = new List<Enum>();
+        public List<ITrait> Traits = new List<ITrait>();
     }
 }

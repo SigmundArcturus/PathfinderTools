@@ -19,10 +19,10 @@ namespace Pathfinder.Generators.Background.Providers
             return new Homeland()
             {
                 HomelandType = BackgroundEnums.HomelandTypes.Forest,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.regionalTraits.LogRoller,
-                    Traits.raceTraits.AnimalFriend
+                    new LogRollerTrait(),
+                    new AnimalFriendTrait()
                 }
             };
         }

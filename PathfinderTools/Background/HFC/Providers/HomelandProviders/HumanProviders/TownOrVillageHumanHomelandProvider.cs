@@ -19,9 +19,9 @@ namespace Pathfinder.Generators.Background.Providers
             return new Homeland()
             {
                 HomelandType = BackgroundEnums.HomelandTypes.TownOrVillage,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.regionalTraits.MilitiaVeteran
+                    new MilitiaVeteranTrait()
                 }
             };
         }

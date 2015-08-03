@@ -21,9 +21,9 @@ namespace Pathfinder.Generators.Background.Providers
                     new FiendBloodTrait()
                 },
 
-                StoryFeats = new List<Enum>()
+                StoryFeats = new List<IStoryFeats>()
                 {
-                    BackgroundEnums.StoryFeats.Damned
+                    new DamnedStoryFeat()
                 }
             };
         }

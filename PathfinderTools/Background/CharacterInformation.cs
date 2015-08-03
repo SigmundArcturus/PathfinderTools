@@ -17,7 +17,7 @@ namespace Pathfinder.Generators.Background
 
         public CircumstanceOfBirth BirthCircumstance { get; internal set; }
 
-        public ParentsProfession ParentsProfession { get; internal set; }
+        public List<ParentsProfession> ParentsProfessions { get; internal set; }
 
         public AdoptiveRace AdoptiveRace { get; internal set; }
 
@@ -26,5 +26,7 @@ namespace Pathfinder.Generators.Background
         public Parents Parents { get; internal set; }
 
         public List<ITrait> Traits { get; internal set; }
+
+        public List<IStoryFeats> StoryFeats { get; internal set; }
     }
 }

@@ -19,10 +19,10 @@ namespace Pathfinder.Generators.Background.Providers
             return new Homeland()
             {
                 HomelandType = BackgroundEnums.HomelandTypes.Subterranean,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.raceTraits.Scrapper,
-                    Traits.regionalTraits.SurfaceStranger
+                    new ScrapperTrait(),
+                    new SurfaceStrangerTrait()
                 }
             };
         }

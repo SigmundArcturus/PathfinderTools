@@ -19,10 +19,10 @@ namespace Pathfinder.Generators.Background.Providers
             return new ParentsProfession()
             {
                 Profression = BackgroundEnums.ParentsProfessionTypes.Tradespeople,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.socialTrats.Artisan,
-                    Traits.socialTrats.LifeOfToil
+                    new ArtisanTrait(),
+                    new LifeOfToilTrait()
                 }
             };
         }

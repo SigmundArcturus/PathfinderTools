@@ -19,9 +19,9 @@ namespace Pathfinder.Generators.Background.Providers
             return new ParentsProfession()
             {
                 Profression = BackgroundEnums.ParentsProfessionTypes.Merchants,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.socialTrats.Merchant
+                    new MerchantTrait()
                 }
             };
         }

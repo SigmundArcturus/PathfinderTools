@@ -59,7 +59,7 @@ namespace Pathfinder.Generators.Background
                 }
             }
 
-            if (siblings.Siblings.Count() > 1) { siblings.Traits.Add(Traits.combatTraits.KinGuardian); }
+            if (siblings.Siblings.Count() > 1) { siblings.Traits.Add(new KinGuardianTrait()); }
             return siblings;
         }
 

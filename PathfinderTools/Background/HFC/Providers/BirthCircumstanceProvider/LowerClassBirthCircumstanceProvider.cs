@@ -21,7 +21,7 @@ namespace Pathfinder.Generators.Background.Providers
             return new CircumstanceOfBirth() 
             {
                 CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.LowerClassBirth,
-                ParentsProfession = new List<ParentsProfession>() 
+                ParentsProfessions = new List<ParentsProfession>() 
                 {
                     GetParentsProfession(RandomDieGenerator.D20 + RandomDieGenerator.D20)
                 },

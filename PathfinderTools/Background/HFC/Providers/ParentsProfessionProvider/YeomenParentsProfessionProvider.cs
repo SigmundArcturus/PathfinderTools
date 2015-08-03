@@ -19,9 +19,9 @@ namespace Pathfinder.Generators.Background.Providers
             return new ParentsProfession()
             {
                 Profression = BackgroundEnums.ParentsProfessionTypes.Yeomen,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.regionalTraits.SavannaChild
+                    new SavannaChildTrait()
                 }
             };
         }

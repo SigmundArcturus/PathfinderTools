@@ -10,8 +10,8 @@ namespace Pathfinder.Generators.Background
     {
         public BackgroundEnums.CircumstanceOfBirthTypes CircumstanceType;
         public List<ITrait> Traits = new List<ITrait>();
-        public List<Enum> StoryFeats = new List<Enum>();
-        public List<ParentsProfession> ParentsProfession = new List<ParentsProfession>();
+        public List<IStoryFeats> StoryFeats = new List<IStoryFeats>();
+        public List<ParentsProfession> ParentsProfessions = new List<ParentsProfession>();
         public Nobility Nobility;
     }
 }

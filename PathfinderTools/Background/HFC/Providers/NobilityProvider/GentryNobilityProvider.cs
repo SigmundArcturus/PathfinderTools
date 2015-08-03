@@ -18,7 +18,6 @@ namespace Pathfinder.Generators.Background.Providers
         {
             return new Nobility()
             {
-                NobilityType = BackgroundEnums.NobilityTypes.Gentry,
                 Title = "Gentry",
                 Description = ""
             };

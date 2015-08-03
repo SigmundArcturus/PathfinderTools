@@ -31,11 +31,11 @@ namespace Pathfinder.Generators.Background
 
                 sibling = new Sibling();
                 sibling.Race = BackgroundEnums.RaceTypes.HalfElf;
-                //sibling.Traits.Add(Traits.magicTraits.KinBond);
+                siblings.Traits.Add(new KinBondTrait());
                 siblings.Siblings.Add(sibling);
             }
 
-            if (siblings.Siblings.Count() >= 1) { siblings.Traits.Add(Traits.combatTraits.KinGuardian); }
+            if (siblings.Siblings.Count() >= 1) { siblings.Traits.Add(new KinGuardianTrait()); }
             return siblings;
         }
 

@@ -20,9 +20,9 @@ namespace Pathfinder.Generators.Background.Providers
                 {
                     new ResilientTrait()
                 },
-                StoryFeats = new List<Enum>()
+                StoryFeats = new List<IStoryFeats>()
                 {
-                    BackgroundEnums.StoryFeats.FeralHeart
+                    new FeralHeartStoryFeat()
                 }
             };
         }

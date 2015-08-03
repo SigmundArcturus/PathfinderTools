@@ -209,6 +209,16 @@
     <Compile Include="Background\HFC\Tables\Dwarf\DwarfParentsTable.cs" />
     <Compile Include="Background\HFC\Tables\Dwarf\DwarfSiblingsTable.cs" />
     <Compile Include="Background\IHFCCharacterInformation.cs" />
+    <Compile Include="Background\StoryFeats\DamnedStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\FeralHeartStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\GlimpseBeyondStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\ForgottenPastStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\ProphetStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\ArisenStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\RedemptionStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\LostLegacyStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\ShamedStoryFeat.cs" />
+    <Compile Include="Background\StoryFeats\IStoryFeats.cs" />
     <Compile Include="Background\Traits\CombatTraits\AxeToGrindTrait.cs" />
     <Compile Include="Background\Traits\CombatTraits\ResilientTrait.cs" />
     <Compile Include="Background\Traits\CombatTraits\CourageousTrait.cs" />
@@ -228,6 +238,7 @@
     <Compile Include="Background\Traits\FaithTraits\BlessedTrait.cs" />
     <Compile Include="Background\Traits\FaithTraits\ChildOfTheTempleTrait.cs" />
     <Compile Include="Background\Traits\FaithTraits\ScholarOfTheGreatBeyondTrait.cs" />
+    <Compile Include="Background\Traits\MagicTraits\KinBondTrait.cs" />
     <Compile Include="Background\Traits\MagicTraits\MagicTraitBase.cs" />
     <Compile Include="Background\Traits\MagicTraits\MagicalKnackTrait.cs" />
     <Compile Include="Background\Traits\MagicTraits\MagicalTalentTrait.cs" />
@@ -273,7 +284,6 @@
     <Compile Include="Background\Traits\RegionalTraits\SurfaceStrangerTrait.cs" />
     <Compile Include="Background\Traits\RegionalTraits\HighlanderTrait.cs" />
     <Compile Include="Background\Traits\SocialTraits\BaseSocialTrait.cs" />
-    <Compile Include="Background\Traits\RaceTraitEnum.cs" />
     <Compile Include="Background\Traits\SocialTraits\SavageTrait.cs" />
     <Compile Include="Background\Traits\SocialTraits\ChildOfTheStreetsTrait.cs" />
     <Compile Include="Background\Traits\SocialTraits\FriendInEveryTownTrait.cs" />
@@ -289,8 +299,6 @@
     <Compile Include="Background\Traits\SocialTraits\PovertyStrickenTrait.cs" />
     <Compile Include="Background\Traits\SocialTraits\OrphanedTrait.cs" />
     <Compile Include="Background\Traits\SocialTraits\CivilizedTrait.cs" />
-    <Compile Include="Background\Traits\TraitEnum.cs" />
-    <Compile Include="Background\Traits\Traits.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomDieGenerator.cs" />

@@ -13,9 +13,10 @@ namespace Pathfinder.Generators.Background
         Homeland Homeland { get; }
         Parents Parents { get; }
         CircumstanceOfBirth BirthCircumstance { get; }
-        ParentsProfession ParentsProfession { get; }
+        List<ParentsProfession> ParentsProfessions { get; }
         AdoptiveRace AdoptiveRace { get; }
         Nobility Nobility { get; }
         List<ITrait> Traits { get; }
+        List<IStoryFeats> StoryFeats { get; }
     }
 }

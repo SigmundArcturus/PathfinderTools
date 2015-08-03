@@ -11,12 +11,12 @@ namespace Pathfinder.Generators.Background
         public AdoptiveRace()
         {
             Traits = new List<ITrait>();
-            StoryFeats = new List<Enum>();
+            StoryFeats = new List<IStoryFeats>();
         }
 
         public List<ITrait> Traits { get; internal set; }
         public BackgroundEnums.AdoptedOutsideYourRaceTypes RaceType { get; set; }
-        public List<Enum> StoryFeats { get; internal set; }
+        public List<IStoryFeats> StoryFeats { get; internal set; }
         public BackgroundEnums.RaceTypes CivilizedRace { get; set; }
     }
 }

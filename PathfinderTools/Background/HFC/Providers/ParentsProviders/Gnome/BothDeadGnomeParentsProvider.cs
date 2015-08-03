@@ -19,9 +19,9 @@ namespace Pathfinder.Generators.Background.Providers
             return new Parents()
             {
                 ParentsState = BackgroundEnums.ParentTypes.BothDead,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.socialTrats.Orphaned
+                    new OrphanedTrait()
                 },
                 Description = "Both of your parents are dead"
             };

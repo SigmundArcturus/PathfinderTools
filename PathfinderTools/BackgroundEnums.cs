@@ -14,8 +14,6 @@ namespace Pathfinder.Generators.Background{
             Sea, Tundra, AnotherPlane
         };
 
-        public enum TraitTypes { regionalTrait, raceTrait, combatTrait, socialTrait, magicTrait, faithTrait };
-
         public enum RaceTypes
         {
             Aasimar, Catfolk, Changeling, Dhampir, Duergar, Dwarf, Elf, Fetchling, Gillman, Gnome, Goblin,

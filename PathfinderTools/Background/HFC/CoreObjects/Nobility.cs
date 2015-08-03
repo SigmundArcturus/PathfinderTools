@@ -8,7 +8,6 @@ namespace Pathfinder.Generators.Background
 {
     public class Nobility
     {
-        public BackgroundEnums.NobilityTypes NobilityType { get; internal set; }
         public string Title { get; internal set; }
         public string Description { get; internal set; }
     }

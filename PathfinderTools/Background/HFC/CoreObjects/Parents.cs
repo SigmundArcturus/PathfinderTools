@@ -10,6 +10,6 @@ namespace Pathfinder.Generators.Background
     {
         public BackgroundEnums.ParentTypes ParentsState;
         public string Description;
-        public List<Enum> Traits = new List<Enum>();
+        public List<ITrait> Traits = new List<ITrait>();
     }
 }

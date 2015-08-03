@@ -19,10 +19,10 @@ namespace Pathfinder.Generators.Background.Providers
             return new Homeland()
             {
                 HomelandType = BackgroundEnums.HomelandTypes.HillsOrMountains,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.regionalTraits.Highlander,
-                    Traits.raceTraits.GoldSniffer
+                    new HighlanderTrait(),
+                    new GoldsnifferTrait()
                 }
             };
         }

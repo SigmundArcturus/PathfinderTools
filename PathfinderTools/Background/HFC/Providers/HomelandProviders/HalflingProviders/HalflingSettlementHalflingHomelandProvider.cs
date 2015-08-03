@@ -19,10 +19,10 @@ namespace Pathfinder.Generators.Background.Providers
             return new Homeland()
             {
                 HomelandType = BackgroundEnums.HomelandTypes.HalflingSettlement,
-                Traits = new List<Enum>()
+                Traits = new List<ITrait>()
                 {
-                    Traits.socialTrats.Civilized,
-                    Traits.raceTraits.WellInformed
+                    new CivilizedTrait(),
+                    new WellInformedTrait()
                 }
             };
         }
