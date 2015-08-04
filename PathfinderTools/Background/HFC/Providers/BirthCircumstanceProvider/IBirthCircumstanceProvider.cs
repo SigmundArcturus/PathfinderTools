@@ -9,6 +9,6 @@ namespace Pathfinder.Generators.Background.Providers
     interface IBirthCircumstanceProvider
     {
         bool IsWithinRange(int dieValue);
-        CircumstanceOfBirth GetBirthCircumstance(CircumstanceOfBirth circumstance);
+        CircumstanceOfBirth GetBirthCircumstance();
     }
 }

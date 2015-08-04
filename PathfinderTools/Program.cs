@@ -15,8 +15,8 @@ namespace Pathfinder.Generators.Background
         {
             DwarfBackgroundBuilder dbb = new DwarfBackgroundBuilder();
             CharacterInformation charInfo = dbb.CreateBackground();
-
-            string race = Console.ReadLine();
+            charInfo = dbb.CreateBackground();
+            Console.ReadLine();
         }
     }
 }

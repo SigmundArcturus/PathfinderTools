@@ -10,13 +10,12 @@ namespace Pathfinder.Generators.Background.Providers
     {
         public bool IsWithinRange(int dieValue)
         {
-            return RangeTool.WithinRange(1, 40, dieValue);
+            return RangeTool.WithinRange(1, 48, dieValue);
         }
 
-        public Sibling GetSiblingAge(Sibling sibling)
+        public BackgroundEnums.RelativeSiblingAge GetSiblingAge()
         {
-            sibling.RelativeAge = BackgroundEnums.RelativeSiblingAge.Older;
-            return sibling;
+            return BackgroundEnums.RelativeSiblingAge.Older;
         }
     }
 }

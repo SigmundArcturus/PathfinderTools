@@ -9,6 +9,6 @@ namespace Pathfinder.Generators.Background.Providers
     interface IAdoptedSiblingRaceProvider
     {
         bool IsWithinRange(int dieValue);
-        Sibling GetSiblingRace(Sibling sibling);
+        BackgroundEnums.RaceTypes GetSiblingRace();
     }
 }

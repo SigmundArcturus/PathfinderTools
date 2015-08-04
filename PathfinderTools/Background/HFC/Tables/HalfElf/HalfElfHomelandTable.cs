@@ -13,7 +13,6 @@ namespace Pathfinder.Generators.Background
         private static List<IHalfElfHomelandProvider> homelandProviders = TableHelper.GetProviderList<IHalfElfHomelandProvider>();
         public Homeland GenerateHomeland(int dieValue)
         {
-
             foreach (IHalfElfHomelandProvider homelandProvider in homelandProviders)
             {
                 if (homelandProvider.IsWithinRange(dieValue))

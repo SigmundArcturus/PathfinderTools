@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pathfinder.Generators.Background.Providers
 {
-    internal abstract class ElvenHomelandHalfElfHomelandProvider : IHalfElfHomelandProvider
+    internal class ElvenHomelandHalfElfHomelandProvider : IHalfElfHomelandProvider
     {
         public bool IsWithinRange(int dieValue)
         {
@@ -16,9 +16,25 @@ namespace Pathfinder.Generators.Background.Providers
 
         public Homeland GetHomeland()
         {
-            ElfHomelandTable elfHomelandTable = new ElfHomelandTable();
-            return null;
-            //return elfHomelandTable.GenerateHomeland();
+            Homeland homeland = new ElfHomelandTable().GenerateHomeland();
+
+            if (homeland.HomelandType == BackgroundEnums.HomelandTypes.CityOrMetropolis)
+            {
+                homeland.Traits = new List<ITrait>()
+                {
+                    new CivilizedTrait(),
+                    new FailedApprenticeTrait()
+                };
+            }
+            else if (homeland.HomelandType == BackgroundEnums.HomelandTypes.TownOrVillage)
+            {
+                homeland.Traits = new List<ITrait>()
+                {
+                    new FailedApprenticeTrait()
+                };
+            }
+
+            return homeland;
         }
     }
 }

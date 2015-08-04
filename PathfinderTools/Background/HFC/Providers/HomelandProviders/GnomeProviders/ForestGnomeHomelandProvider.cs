@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pathfinder.Generators.Background.Providers
 {
-    internal abstract class ForestGnomeHomelandProvider : IGnomeHomelandProvider
+    internal class ForestGnomeHomelandProvider : IGnomeHomelandProvider
     {
         public bool IsWithinRange(int dieValue)
         {

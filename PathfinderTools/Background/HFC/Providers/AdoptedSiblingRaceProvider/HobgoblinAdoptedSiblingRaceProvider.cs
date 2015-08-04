@@ -14,10 +14,9 @@ namespace Pathfinder.Generators.Background.Providers
         }
 
 
-        public Sibling GetSiblingRace(Sibling sibling)
+        public BackgroundEnums.RaceTypes GetSiblingRace()
         {
-            sibling.Race = BackgroundEnums.RaceTypes.Hobgoblin;
-            return sibling;
+            return BackgroundEnums.RaceTypes.Hobgoblin;
         }
     }
 }

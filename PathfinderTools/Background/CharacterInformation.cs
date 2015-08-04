@@ -8,6 +8,12 @@ namespace Pathfinder.Generators.Background
 {
     public class CharacterInformation : IHFCCharacterInformation
     {
+        public CharacterInformation()
+        {
+            Traits = new List<ITrait>();
+            StoryFeats = new List<IStoryFeats>();
+            ParentsProfessions = new List<ParentsProfession>();
+        }
 
         public string Race { get; internal set; }
 

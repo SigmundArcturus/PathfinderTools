@@ -9,6 +9,6 @@ namespace Pathfinder.Generators.Background.Providers
     interface IRelativeSiblingAgeProvider
     {
         bool IsWithinRange(int dieValue);
-        Sibling GetSiblingAge(Sibling sibling);
+        BackgroundEnums.RelativeSiblingAge GetSiblingAge();
     }
 }

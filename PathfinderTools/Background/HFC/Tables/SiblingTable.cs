@@ -33,7 +33,7 @@ namespace Pathfinder.Generators.Background
             foreach (IAdoptedSiblingRaceProvider adoptedRaceProvider in adoptedSiblingRaceProvider)
             {
                 if (adoptedRaceProvider.IsWithinRange(dieValue))
-                   sibling = adoptedRaceProvider.GetSiblingRace(sibling);
+                   sibling.Race = adoptedRaceProvider.GetSiblingRace();
             }
 
         }
@@ -43,7 +43,7 @@ namespace Pathfinder.Generators.Background
             foreach (IRelativeSiblingAgeProvider relativeSiblingAge in relativeSiblingAgeProvider)
             {
                 if (relativeSiblingAge.IsWithinRange(dieValue))
-                    sibling = relativeSiblingAge.GetSiblingAge(sibling);
+                    sibling.RelativeAge = relativeSiblingAge.GetSiblingAge();
             }
         }
     }

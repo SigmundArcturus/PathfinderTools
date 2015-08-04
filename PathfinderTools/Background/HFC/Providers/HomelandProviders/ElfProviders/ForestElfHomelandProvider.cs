@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pathfinder.Generators.Background.Providers
 {
-    internal abstract class ForestElfHomelandProvider : IElfHomelandProvider
+    internal class ForestElfHomelandProvider : IElfHomelandProvider
     {
         public bool IsWithinRange(int dieValue)
         {

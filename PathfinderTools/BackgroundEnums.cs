@@ -9,31 +9,31 @@ namespace Pathfinder.Generators.Background{
     {
         public enum HomelandTypes
         {
-            HillsOrMountains, Underground, TownOrVillage, CityOrMetropolis, Forest, Subterranean, OrcSettlement, NoTrueHomeland,
+            HillsOrMountains = 1, Underground, TownOrVillage, CityOrMetropolis, Forest, Subterranean, OrcSettlement, NoTrueHomeland,
             HalflingSettlement, HumanSettlement, TravelingBandOrCaravan, Frontier, Mountains, Plains, RiverSwampWetlands, Desert,
             Sea, Tundra, AnotherPlane
         };
 
         public enum RaceTypes
         {
-            Aasimar, Catfolk, Changeling, Dhampir, Duergar, Dwarf, Elf, Fetchling, Gillman, Gnome, Goblin,
+            Aasimar = 1, Catfolk, Changeling, Dhampir, Duergar, Dwarf, Elf, Fetchling, Gillman, Gnome, Goblin,
             Grippli, HalfElf, HalfOrc, Halfling, Hobgoblin, Human, Ifrit, Kitsune, Kobold, Merfolk, Nagaji, Orc, Oread, Ratfolk,
             Samsaran, Strix, Suli, Svirfneblin, Sylph, Tengu, Tiefling, Undine, Vanara, Vishkanya, Wayang
         };
 
         public enum RelativeSiblingAge
         {
-            Older, Younger, Twin
+            Older = 1, Younger, Twin
         };
 
         public enum ParentTypes
         {
-            BothAlive, FatherAlive, MotherAlive, BothDead
+            BothAlive = 1, FatherAlive, MotherAlive, BothDead
         };
 
         public enum CircumstanceOfBirthTypes
         {
-            LowerClassBirth,
+            LowerClassBirth = 1,
             MiddleClassBirth,
             NobleBirth,
             AdoptedOutsideYourRace,
@@ -57,7 +57,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum ParentsProfessionTypes
         {
-            Slaves,
+            Slaves = 1,
             SerfsPeasants,
             Entertainers,
             Soldiers,
@@ -73,7 +73,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum AdoptedOutsideYourRaceTypes
         {
-            AdoptedByDragons,
+            AdoptedByDragons = 1,
             AdoptedByTheFey,
             RaisedAmongTheDead,
             RaisedByAngels,
@@ -85,7 +85,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum NobilityTypes
         {
-            Gentry,
+            Gentry = 1,
             Knight,
             Baron,
             Count,
@@ -96,7 +96,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum MajorChildhoodEventTypes
         {
-            AcademyTraining,
+            AcademyTraining = 1,
             Betrayal,
             Bullied,
             CompetitionChampion,
@@ -120,7 +120,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum CrimeTypes
         {
-            Adultery,
+            Adultery = 1,
             Arson,
             Burglary,
             Heresy,
@@ -134,7 +134,7 @@ namespace Pathfinder.Generators.Background{
 
         public enum PunishmentTypes
         {
-            Beating,
+            Beating = 1,
             Branding,
             Exile,
             Fine,
@@ -148,13 +148,13 @@ namespace Pathfinder.Generators.Background{
 
         public enum FamilyTypes
         {
-            BirthFamily,
+            BirthFamily = 1,
             AdoptedFamily
         }
 
         public enum StoryFeats
         {
-            Shamed,
+            Shamed = 1,
             LostLegacy,
             Redemption,
             Arisen,

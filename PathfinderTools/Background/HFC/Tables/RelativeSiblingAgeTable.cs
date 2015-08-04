@@ -4,24 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Pathfinder.Generators.Background.Providers;
+
 namespace Pathfinder.Generators.Background
 {
     class RelativeSiblingAgeTable
     {
+        private static List<IRelativeSiblingAgeProvider> ageProviders = TableHelper.GetProviderList<IRelativeSiblingAgeProvider>();
+
         public static BackgroundEnums.RelativeSiblingAge GenerateAge(int dieValue)
         {
-            if (RangeTool.WithinRange(1, 48, dieValue))
+            foreach (IRelativeSiblingAgeProvider ageProvider in ageProviders)
             {
-                return BackgroundEnums.RelativeSiblingAge.Older;
+                if (ageProvider.IsWithinRange(dieValue))
+                    return ageProvider.GetSiblingAge();
             }
-            else if (RangeTool.WithinRange(49, 96, dieValue))
-            {
-                return BackgroundEnums.RelativeSiblingAge.Younger;
-            }
-            else
-            {
-                return BackgroundEnums.RelativeSiblingAge.Twin;
-            }
+
+            return 0;
         }
 
         public static BackgroundEnums.RelativeSiblingAge GenerateAge()

@@ -18,7 +18,7 @@ namespace Pathfinder.Generators.Background.Providers
         {
             return new Parents()
             {
-                ParentsState = BackgroundEnums.ParentTypes.MotherAlive,
+                ParentsState = BackgroundEnums.ParentTypes.BothAlive,
                 Description = "Both of your parents are alive."
             };
         }

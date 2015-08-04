@@ -52,7 +52,19 @@ namespace Pathfinder.Generators.Background
             {
                 characterInformation.AdoptiveRace = AdoptedOutsideYourRaceTable.GenerateRace();
             }
-            characterInformation.ParentsProfessions = characterInformation.BirthCircumstance.ParentsProfessions;
+            
+            if (characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.NobleBirth)
+            {
+                characterInformation.Nobility = NobilityTable.GenerateNobility();
+            }
+            else if (characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.LowerClassBirth)
+            {
+                characterInformation.ParentsProfessions.Add(new ParentsProfessionTable().GenerateProfession(RandomDieGenerator.D20 + RandomDieGenerator.D20));
+            }
+            else
+            {
+                characterInformation.ParentsProfessions.Add(new ParentsProfessionTable().GenerateProfession());
+            }
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Pathfinder.Generators.Background
         private static List<IGnomeHomelandProvider> homelandProviders = TableHelper.GetProviderList<IGnomeHomelandProvider>();
         public Homeland GenerateHomeland(int dieValue)
         {
-
             foreach (IGnomeHomelandProvider homelandProvider in homelandProviders)
             {
                 if (homelandProvider.IsWithinRange(dieValue))

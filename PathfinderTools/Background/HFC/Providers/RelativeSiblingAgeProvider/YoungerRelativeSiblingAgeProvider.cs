@@ -13,10 +13,9 @@ namespace Pathfinder.Generators.Background.Providers
             return RangeTool.WithinRange(49, 96, dieValue);
         }
 
-        public Sibling GetSiblingAge(Sibling sibling)
+        public BackgroundEnums.RelativeSiblingAge GetSiblingAge()
         {
-            sibling.RelativeAge = BackgroundEnums.RelativeSiblingAge.Younger;
-            return sibling;
+            return BackgroundEnums.RelativeSiblingAge.Younger;
         }
     }
 }

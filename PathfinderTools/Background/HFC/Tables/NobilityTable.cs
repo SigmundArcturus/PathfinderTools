@@ -4,54 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Pathfinder.Generators.Background.Providers;
+
 namespace Pathfinder.Generators.Background
 {
     static class NobilityTable
     {
+        private static List<INobilityProvider> nobilityProviders = TableHelper.GetProviderList<INobilityProvider>();
+
         static public Nobility GenerateNobility(int dieValue)
         {
-            if (RangeTool.WithinRange(1, 60, dieValue))
+            foreach (INobilityProvider nobilityProvider in nobilityProviders)
             {
-                return new Nobility() 
-                {
-                };
+                if (nobilityProvider.IsWithinRange(dieValue))
+                    return nobilityProvider.GetNobility();
             }
-            else if (RangeTool.WithinRange(61, 78, dieValue))
-            {
-                return new Nobility()
-                {
-                };
-            }
-            else if (RangeTool.WithinRange(79, 85, dieValue))
-            {
-                return new Nobility()
-                {
-                };
-            }
-            else if (RangeTool.WithinRange(86, 91, dieValue))
-            {
-                return new Nobility()
-                {
-                };
-            }
-            else if (RangeTool.WithinRange(92, 96, dieValue))
-            {
-                return new Nobility()
-                {
-                };
-            }
-            else if (RangeTool.WithinRange(97, 99, dieValue))
-            {
-                return new Nobility()
-                {
-                };
-            }
-            else
-            {
-                return new Nobility()
-                {
-                };
-            }
+            return null;
         }
 
         static public Nobility GenerateNobility()
