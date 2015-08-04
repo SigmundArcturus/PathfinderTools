@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pathfinder.Generators.Background.Providers
 {
-    internal abstract class UnusualHalfOrcHomelandProvider : IHalfOrcHomelandProvider
+    internal class UnusualHalfOrcHomelandProvider : IHalfOrcHomelandProvider
     {
         public bool IsWithinRange(int dieValue)
         {
