@@ -18,12 +18,7 @@ namespace Pathfinder.Generators.Background.Providers
         {
             return new CircumstanceOfBirth() 
             {
-                CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.AdoptedOutsideYourRace,
-                Traits = new List<ITrait>()
-                {
-                    new ArtisanTrait(),
-                    new MerchantTrait()
-                }
+                CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.AdoptedOutsideYourRace
             };
         }
     }
