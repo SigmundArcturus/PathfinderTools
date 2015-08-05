@@ -13,7 +13,7 @@ namespace Pathfinder.Generators.Background
     {
         static void Main(string[] args)
         {
-            HalfOrcBackgroundBuilder dbb = new HalfOrcBackgroundBuilder();
+            BaseBackgroundBuilder dbb = new HumanBackgroundBuilder();
             CharacterInformation charInfo = dbb.CreateBackground();
             Console.ReadLine();
         }
