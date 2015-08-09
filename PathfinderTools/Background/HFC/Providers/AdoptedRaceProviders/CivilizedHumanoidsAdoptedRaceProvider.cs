@@ -23,11 +23,11 @@ namespace Pathfinder.Generators.Background.Providers
                     RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                     CivilizedRace = BackgroundEnums.RaceTypes.Dwarf,
                     Traits = new List<ITrait>()
-                {
-                    new BrewmasterTrait(),
-                    new GoldsnifferTrait(),
-                    new TunnelFighterTrait()
-                }
+                    {
+                        new BrewmasterTrait(),
+                        new GoldsnifferTrait(),
+                        new TunnelFighterTrait()
+                    }
                 };
             }
             else if (race == 2)
