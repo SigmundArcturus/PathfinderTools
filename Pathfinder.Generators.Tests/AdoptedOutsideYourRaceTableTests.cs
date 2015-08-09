@@ -9,15 +9,28 @@ namespace Pathfinder.Generators.Tests
     [TestClass]
     public class AdoptedOutsideYourRaceTableTests
     {
+        AdoptiveRace race;
+        AdoptiveRaceTestObject expectedRace;
+
+        [TestInitialize()]
+        public void Initialize()
+        {
+            race = null;
+            expectedRace = null;
+        }
+
+        [TestCleanup()]
+        public void Cleanup()
+        {
+            race = null;
+            expectedRace = null;
+        }
+
         [TestMethod]
         public void BasicRetrievalTest()
         {
-            //Arange
-            AdoptiveRace race;
-
-            //Act
             race = AdoptedOutsideYourRaceTable.GenerateRace();
-            //Assert
+
             Assert.IsNotNull(race);
         }
 
@@ -38,7 +51,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.AdoptedByDragons,
                 Traits = new List<ITrait>()
@@ -62,7 +75,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.AdoptedByTheFey,
                 Traits = new List<ITrait>()
@@ -86,7 +99,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedAmongTheDead,
                 Traits = new List<ITrait>()
@@ -115,7 +128,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByAngels,
                 Traits = new List<ITrait>()
@@ -138,7 +151,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByBeasts,
                 Traits = new List<ITrait>()
@@ -166,7 +179,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.Dwarf,
@@ -195,7 +208,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.Elf,
@@ -223,7 +236,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.Gnome,
@@ -251,7 +264,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.HalfElf,
@@ -279,7 +292,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.Halfling,
@@ -307,7 +320,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.HalfOrc,
@@ -337,7 +350,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedByCivilizedHumanoids,
                 CivilizedRace = BackgroundEnums.RaceTypes.Human,
@@ -365,7 +378,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.RaisedBySavageHumanoids,
                 Traits = new List<ITrait>()
@@ -388,7 +401,7 @@ namespace Pathfinder.Generators.Tests
         {
             //Arange
             AdoptiveRace actualRace;
-            AdoptiveRaceTestObject expectedRace = new AdoptiveRaceTestObject()
+            expectedRace = new AdoptiveRaceTestObject()
             {
                 RaceType = BackgroundEnums.AdoptedOutsideYourRaceTypes.FiendRaised,
                 Traits = new List<ITrait>()

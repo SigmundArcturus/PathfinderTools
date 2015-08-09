@@ -8,7 +8,7 @@ using Pathfinder.Generators.Background.Providers;
 
 namespace Pathfinder.Generators.Background
 {
-    class AdoptedSiblingRaceTable
+    public class AdoptedSiblingRaceTable
     {
         private static List<IAdoptedSiblingRaceProvider> adoptedRaceProviders = TableHelper.GetProviderList<IAdoptedSiblingRaceProvider>();
 

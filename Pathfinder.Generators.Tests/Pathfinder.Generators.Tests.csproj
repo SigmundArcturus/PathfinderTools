@@ -51,7 +51,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AdoptedOutsideYourRaceTableTests.cs" />
-    <Compile Include="AdoptiveRaceTestObject.cs" />
+    <Compile Include="AdoptedSiblingRaceTableTests.cs" />
+    <Compile Include="Test Objects\AdoptiveRaceTestObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
