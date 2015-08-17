@@ -35,6 +35,16 @@ namespace Pathfinder.Generators.Tests
         }
 
         [TestMethod]
+        public void CompleteInBoundsTest()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                race = AdoptedOutsideYourRaceTable.GenerateRace(i);
+                Assert.IsNotNull(race);
+            }
+        }
+
+        [TestMethod]
         public void BasicOutOfBoundsTest()
         {
             //Arange

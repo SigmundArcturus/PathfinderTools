@@ -55,7 +55,7 @@ namespace Pathfinder.Generators.Background
                 characterInformation.AdoptiveRace = AdoptedOutsideYourRaceTable.GenerateRace();
             }
             
-            if (characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.NobleBirth)
+            if (characterInformation.BirthCircumstance != null && characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.NobleBirth)
             {
                 characterInformation.Nobility = NobilityTable.GenerateNobility();
             }

@@ -10,7 +10,7 @@ namespace Pathfinder.Generators.Background.Providers
     {
         public bool IsWithinRange(int dieValue)
         {
-            return RangeTool.WithinRange(72, 72, dieValue);
+            return RangeTool.WithinRange(71, 71, dieValue);
         }
 
 

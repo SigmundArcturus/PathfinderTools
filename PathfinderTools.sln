@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathfinder.Generators", "PathfinderTools\Pathfinder.Generators.csproj", "{072E96FE-AACA-462C-AD0A-598AB8464756}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathfinder.Generators.Tests", "Pathfinder.Generators.Tests\Pathfinder.Generators.Tests.csproj", "{FF3BF042-89F2-4BBC-B26C-F8D00FF38EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathfinder.Web.UI", "Pathfinder.Web.UI\Pathfinder.Web.UI.csproj", "{0BD74153-4B55-46DD-86C9-ED0F76951F7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FF3BF042-89F2-4BBC-B26C-F8D00FF38EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF3BF042-89F2-4BBC-B26C-F8D00FF38EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF3BF042-89F2-4BBC-B26C-F8D00FF38EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD74153-4B55-46DD-86C9-ED0F76951F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD74153-4B55-46DD-86C9-ED0F76951F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD74153-4B55-46DD-86C9-ED0F76951F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD74153-4B55-46DD-86C9-ED0F76951F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

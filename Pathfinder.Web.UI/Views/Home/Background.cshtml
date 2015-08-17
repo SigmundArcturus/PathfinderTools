@@ -1,0 +1,19 @@
+﻿@model CharacterInformationModel
+
+@{
+    ViewBag.Title = "Background";
+}
+
+<h2>Background</h2>
+
+@Html.EnumDropDownListFor(m => m.Information.Race, new { id = "raceSelector" })
+
+<div id="CharInfoContainer">
+@Html.Partial("_CharacterInformation")
+</div>
+
+<input type="button" id="refresh" value="Generate" />
+
+@section scripts{ 
+    <script src="@Url.Content("~/Scripts/background.js")"></script>    
+}
