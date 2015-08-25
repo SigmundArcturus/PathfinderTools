@@ -49,7 +49,7 @@ namespace Pathfinder.Generators.Background
 
         protected void GenerateCircumstancesOfBirth(CharacterInformation characterInformation)
         {
-            characterInformation.BirthCircumstance = new CircumstancesOfBirthTable().GenerateCircumstance();
+            characterInformation.BirthCircumstance = CircumstancesOfBirthTable.GenerateCircumstance();
             if (characterInformation.BirthCircumstance.CircumstanceType == BackgroundEnums.CircumstanceOfBirthTypes.AdoptedOutsideYourRace)
             {
                 characterInformation.AdoptiveRace = AdoptedOutsideYourRaceTable.GenerateRace();

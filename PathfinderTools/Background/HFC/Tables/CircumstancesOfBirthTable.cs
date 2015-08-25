@@ -8,11 +8,11 @@ using Pathfinder.Generators.Background.Providers;
 
 namespace Pathfinder.Generators.Background
 {
-    public class CircumstancesOfBirthTable
+    public static class CircumstancesOfBirthTable
     {
         private static List<IBirthCircumstanceProvider> birthCircumstanceProviders = TableHelper.GetProviderList<IBirthCircumstanceProvider>();
 
-        public CircumstanceOfBirth GenerateCircumstance(int dieValue)
+        public static CircumstanceOfBirth GenerateCircumstance(int dieValue)
         {
             foreach (IBirthCircumstanceProvider birthCircumstanceProvider in birthCircumstanceProviders)
             {
@@ -23,7 +23,7 @@ namespace Pathfinder.Generators.Background
             return null;
         }
 
-        public CircumstanceOfBirth GenerateCircumstance()
+        public static CircumstanceOfBirth GenerateCircumstance()
         {
             return GenerateCircumstance(RandomDieGenerator.D100);
         }

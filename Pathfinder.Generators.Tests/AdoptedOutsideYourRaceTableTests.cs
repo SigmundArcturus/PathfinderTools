@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace Pathfinder.Generators.Tests
 {
     [TestClass]
-    public class AdoptedOutsideYourRaceTableTests
+    public class AdoptedOutsideYourRaceTableTests : UnitTestBase
     {
         AdoptiveRace race;
         AdoptiveRaceTestObject expectedRace;
@@ -434,44 +434,12 @@ namespace Pathfinder.Generators.Tests
             }
         }
 
-        public bool TraitIsWithin(List<ITrait> traits, Type type)
-        {
-            foreach (ITrait characterTrait in traits)
-            {
-                if (type.Equals(characterTrait.GetType()))
-                    return true;
-            }
-
-            return false;
-        }
-
-        public bool FeatIsWithin(List<IStoryFeats> feats, Type type)
-        {
-            foreach (IStoryFeats characterFeat in feats)
-            {
-                if (type.Equals(characterFeat.GetType()))
-                    return true;
-            }
-
-            return false;
-        }
-
         public void AssertAdoptiveRace(AdoptiveRaceTestObject expectedRace, AdoptiveRace actualRace)
         {
 
             Assert.AreEqual(actualRace.RaceType, expectedRace.RaceType, "Race Types are mismatched");
-            Assert.AreEqual(expectedRace.Traits.Count, actualRace.Traits.Count, "Trait counts do not match");
-            foreach (ITrait trait in expectedRace.Traits)
-            {
-                Assert.IsTrue(TraitIsWithin(actualRace.Traits, trait.GetType()), "Trait does not match");
-            }
-            Assert.AreEqual(expectedRace.StoryFeats.Count, actualRace.StoryFeats.Count, "Story Feat count does not match");
-
-            foreach (IStoryFeats storyFeat in expectedRace.StoryFeats)
-            {
-                Assert.IsTrue(FeatIsWithin(actualRace.StoryFeats, storyFeat.GetType()), "Expected Feat is not found");
-            }
-
+            AssertTraits(expectedRace.Traits, actualRace.Traits);
+            AssertStoryFeats(expectedRace.StoryFeats, actualRace.StoryFeats);
             Assert.AreEqual(expectedRace.CivilizedRace, actualRace.CivilizedRace);
 
         }

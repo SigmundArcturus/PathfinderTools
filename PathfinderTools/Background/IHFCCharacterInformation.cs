@@ -8,7 +8,7 @@ namespace Pathfinder.Generators.Background
 {
     public interface IHFCCharacterInformation
     {
-        BackgroundEnums.RaceTypes Race { get; }
+        BackgroundEnums.SelectableRaceTypes Race { get; }
         SiblingsList SiblingList { get; }
         Homeland Homeland { get; }
         Parents Parents { get; }

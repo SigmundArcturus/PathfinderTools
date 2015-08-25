@@ -21,6 +21,11 @@ namespace Pathfinder.Generators.Background{
             Samsaran, Strix, Suli, Svirfneblin, Sylph, Tengu, Tiefling, Undine, Vanara, Vishkanya, Wayang
         };
 
+        public enum SelectableRaceTypes
+        {
+            Dwarf = 1, Elf, Gnome, HalfElf, HalfOrc, Halfling, Human
+        };
+
         public enum RelativeSiblingAge
         {
             Older = 1, Younger, Twin

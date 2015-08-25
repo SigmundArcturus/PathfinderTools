@@ -5,5 +5,7 @@
 </div>
 @Html.LabelFor(m => m.Information.Parents.ParentsState): @Model.Information.Parents.ParentsState <br />
 @Html.LabelFor(m => m.Information.Nobility.Title): @(Model.Information.Nobility != null ? Model.Information.Nobility.Title : "No Nobility") <br />
-@Html.ListBoxFor(m => m.Information.Traits, Model.TraitsList)
-@Html.ListBoxFor(m => m.Information.StoryFeats, Model.StoryFeatsList)
+@Html.LabelFor(m => m.Information.Traits): <br /> 
+@if (Model.Information.Traits.Count > 0) { @Html.ListBoxFor(m => m.Information.Traits, Model.TraitsList)} <br />
+@Html.LabelFor(m => m.Information.StoryFeats): <br />
+@if (Model.Information.StoryFeats.Count > 0) { @Html.ListBoxFor(m => m.Information.StoryFeats, Model.StoryFeatsList)} <br />

@@ -15,7 +15,7 @@ namespace Pathfinder.Generators.Background
             ParentsProfessions = new List<ParentsProfession>();
         }
 
-        public BackgroundEnums.RaceTypes Race { get; internal set; }
+        public BackgroundEnums.SelectableRaceTypes Race { get; internal set; }
 
         public SiblingsList SiblingList { get; internal set; }
 

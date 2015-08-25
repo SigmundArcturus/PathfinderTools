@@ -46,15 +46,20 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
     <Compile Include="AdoptedOutsideYourRaceTableTests.cs" />
     <Compile Include="AdoptedSiblingRaceTableTests.cs" />
+    <Compile Include="Test Objects\BirthCircumstanceTestObject.cs" />
     <Compile Include="Test Objects\AdoptiveRaceTestObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CircumstanceOfBirthTableTests.cs" />
+    <Compile Include="UnitTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PathfinderTools\Pathfinder.Generators.csproj">

@@ -18,7 +18,7 @@ namespace Pathfinder.Generators.Background.Providers
         {
             return new CircumstanceOfBirth() 
             {
-                CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BastardBorn,
+                CircumstanceType = BackgroundEnums.CircumstanceOfBirthTypes.BlessedBirth,
                 Traits = new List<ITrait>()
                 {
                     new BlessedTrait(),

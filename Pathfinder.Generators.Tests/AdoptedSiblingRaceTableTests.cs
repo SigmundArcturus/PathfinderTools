@@ -9,7 +9,7 @@ using System.Diagnostics;
 namespace Pathfinder.Generators.Tests
 {
     [TestClass]
-    public class AdoptedSiblingRaceTableTests
+    public class AdoptedSiblingRaceTableTests : UnitTestBase
     {
         BackgroundEnums.RaceTypes adoptedRaceType;
 
